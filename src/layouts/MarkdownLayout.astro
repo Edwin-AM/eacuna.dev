@@ -1,0 +1,49 @@
+---
+import Layout from "./Layout.astro";
+
+const { element } = Astro.props;
+---
+
+<Layout title={element.title} description={"Projects"}>
+  <div class="gif">
+    <img width="300" height="259" alt="RaccoonLaptopGif" src="/laptop.webp" />
+  </div>
+  <h2>{element.title}</h2>
+  <slot />
+  <ul class="badge__list">
+    <li>
+      <span class="badge badge--item">PLATFORM</span>{element.platform}
+    </li>
+    <li><span class="badge badge--item">STACK</span>{element.stack}</li>
+    <li>
+      <span class="badge badge--item">WEBSITE</span><a
+        class="badge__link"
+        href={element.website}
+        target="_blank">{element.website}</a
+      >
+    </li>
+    <li>
+      <span class="badge badge--item">GITHUB</span><a
+        class="badge__link"
+        href={element.github}
+        target="_blank">{element.github}</a
+      >
+    </li>
+  </ul>
+  <div class="center">
+    <img
+      class="pro-img"
+      width="500px"
+      height="281"
+      src={element.worksImage1.url}
+      alt={element.worksImage1.alt}
+    />
+    <img
+      class="pro-img"
+      width="500px"
+      height="281"
+      src={element.worksImage2.url}
+      alt={element.worksImage2.alt}
+    />
+  </div>
+</Layout>

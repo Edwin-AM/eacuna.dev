@@ -1,0 +1,43 @@
+---
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+/* https://developers.google.com/search/docs/appearance/structured-data/organization */
+const organizationSchema = {};
+/** https://developers.google.com/search/docs/appearance/structured-data/event */
+const eventSchema = {};
+const FAQs: FAQ[] = [];
+/** https://developers.google.com/search/docs/appearance/structured-data/faqpage */
+const FAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    FAQs.map(({ answer, question }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  ],
+};
+---
+
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationSchema)}
+/>
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(eventSchema)}
+/>
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify(FAQSchema)}
+/>

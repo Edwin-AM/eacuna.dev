@@ -1,0 +1,38 @@
+---
+interface NavLink {
+  href: string;
+  description: string;
+  target?: string;
+}
+const navLinks: NavLink[] = [
+  {
+    href: "/works/",
+    description: "Proyectos",
+  },
+  {
+    href: "/posts/",
+    description: "Posts",
+  },
+  {
+    href: "https://github.com/k0r13l",
+    description: "GitHub",
+    target: "_blank",
+  },
+];
+---
+
+<div class="navbar">
+  <div class="navbar__title">
+    <a href="/">Home</a>
+  </div>
+  <div class="navbar__menu">
+    {
+      navLinks.map((link) => (
+        <a href={link.href} target={link?.target}>
+          {link.description}
+        </a>
+      ))
+    }
+    <!--<ThemeIcon />-->
+  </div>
+</div>

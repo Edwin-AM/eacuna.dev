@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+
+interface Skill {
+  width: number;
+  height: number;
+  alt: string;
+  url: string;
+}
+const skills: Skill[] = [
+  {
+    width: 46,
+    height: 46,
+    alt: "Vue.js",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "React",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "Next.js",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "Astro",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "MySQL",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "TypeScript",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "JavaScript",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "Git",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "Neovim",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg",
+  },
+  {
+    width: 46,
+    height: 46,
+    alt: "Fedora",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg",
+  },
+];
+---
+
+<div class="skills">
+  {
+    skills.map((skill) => (
+      <Image
+        class="skills__img"
+        width={skill.width}
+        height={skill.height}
+        alt={skill.alt}
+        src={skill.url}
+        loading="eager"
+      />
+    ))
+  }
+</div>
+<style>
+  .skills {
+    margin-top: 8px;
+  }
+
+  .skills__img {
+    margin: 8px 4px;
+  }
+</style>

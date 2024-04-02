@@ -1,0 +1,35 @@
+---
+import StructuredData from "./StructuredData.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<title>{title}</title>
+
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<meta
+  name="keywords"
+  content="portafolio, eacuna, desarrollador, software, full-stack"
+/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- <meta name="og:image" content={new URL(image, Astro.url)} /> -->
+<meta name="og:title" content={title} />
+<meta name="og:description" content={description} />
+<meta name="og:url" content={Astro.url} />
+<meta name="og:site_name" content="Portafolio Edwin Acuña M" />
+<meta name="og:type" content="website" />
+<meta name="og:locale" content="es_ES" />
+
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<StructuredData />

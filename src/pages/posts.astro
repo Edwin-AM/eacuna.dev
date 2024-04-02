@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+interface Post {
+  url: string;
+  image: string;
+  title: string;
+  body: string;
+}
+
+const posts: Post[] = [
+  {
+    url: "",
+    image: "",
+    title: "",
+    body: "",
+  },
+];
+---
+
+<Layout title={"Posts"} description={"Description"}>
+  <!--
+    <div class="gif">
+      <img width="300" height="259" alt="RaccoonLaptopGif" src="/blog.webp"/>
+    </div>
+  -->
+  <h2>Blog</h2>
+  <ul role="list" class="link-card-grid">
+    {
+      posts.map((post) => (
+        <Card
+          url={post.url}
+          image={post.image}
+          title={post.title}
+          body={post.body}
+        />
+      ))
+    }
+  </ul>
+</Layout>
