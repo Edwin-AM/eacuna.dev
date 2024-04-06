@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "eacuna.dev",
   "author": "Edwin Acuña Montero",
   "type": "module",
   "version": "0.0.1",
@@ -12,8 +12,8 @@
     "sync": "astro sync"
   },
   "dependencies": {
-    "astro": "^4.5.8",
     "@astrojs/check": "^0.5.9",
+    "astro": "^4.5.8",
     "typescript": "^5.4.3"
   }
 }
