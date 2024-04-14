@@ -383,3 +383,9 @@ html.light {
     width: 350px;
   }
 }
+
+@media only screen and (max-width: 390px) {
+  body {
+    width: 330px;
+  }
+}
