@@ -1,0 +1,88 @@
+---
+import Section from "../Section.astro"
+import { type Year } from "../../types/"
+
+interface Props {
+  university: string;
+  carreer: string;
+  startYear: Year;
+  endYear: Year;
+}
+
+const { university, carreer, startYear, endYear } = Astro.props as Props;
+const start = new Date(startYear).getUTCFullYear();
+const end   = new Date(endYear).getUTCFullYear();
+---
+
+<Section title="Educación">
+  <ul>
+    <li>
+      <article>
+        <header>
+          <div>
+            <h3>
+              {university}
+            </h3>
+            <h4>{carreer}</h4>
+          </div>
+          <div>
+            <time 
+              datetime={startYear}
+              data-title={startYear}>
+              {start}
+            </time>
+            {" - "}
+            <time 
+              datetime={endYear}
+              data-title={endYear}>
+              {end}
+            </time>
+          </div>
+        </header>
+      </article>
+    </li>
+  </ul>
+</Section>
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+  }
+
+  article h3 {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  article h4 {
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  article header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  article p {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+    text-indent: 0%;
+  }
+
+  footer {
+    margin: 0;
+  }
+</style>

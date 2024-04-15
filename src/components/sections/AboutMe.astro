@@ -1,0 +1,10 @@
+---
+import Section from "../Section.astro"
+import { ABOUT } from "../../consts"
+---
+
+<Section title="Sobre mí">
+  {
+    ABOUT.map((paragraph) => (<p>{paragraph}</p>))
+  }
+</Section>

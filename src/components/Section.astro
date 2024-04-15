@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<section>
+  {title && <h2>{title}</h2>}
+  <slot />
+</section>
+<style>
+  section {
+    max-width: 540px;
+  }
+  
+  @media (width <= 700px) {
+    section {
+      margin-bottom: 38px;
+    }
+  }
+</style>
