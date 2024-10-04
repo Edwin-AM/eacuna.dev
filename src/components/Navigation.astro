@@ -1,37 +1,9 @@
 ---
-interface NavLink {
-  href: string;
-  description: string;
-  target?: string;
-}
-const navLinks: NavLink[] = [
-  // {
-  //   href: "/works/",
-  //   description: "Proyectos",
-  // },
-  // {
-  //   href: "/posts/",
-  //   description: "Posts",
-  // },
-  {
-    href: "https://github.com/Edwin-AM",
-    description: "GitHub",
-    target: "_blank",
-  },
-];
+//@TODO: Insert nav items
 ---
 
 <div class="navbar">
   <div class="navbar__title">
-    <a href="/">Home</a>
-  </div>
-  <div class="navbar__menu">
-    {
-      navLinks.map((link) => (
-        <a href={link.href} target={link?.target}>
-          {link.description}
-        </a>
-      ))
-    }
+    <a href="https://github.com/Edwin-AM" target="_blank">Github</a>
   </div>
 </div>

@@ -61,7 +61,7 @@ a {
 /* Navigation Bar */
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: center; 
   margin-top: 0.8rem;
 }
 
