@@ -9,9 +9,7 @@ interface Props {
   endYear: Year;
 }
 
-const { university, carreer, startYear, endYear } = Astro.props as Props;
-const start = new Date(startYear).getUTCFullYear();
-const end   = new Date(endYear).getUTCFullYear();
+const { university, carreer } = Astro.props as Props;
 ---
 
 <Section title="Educación">
@@ -24,19 +22,6 @@ const end   = new Date(endYear).getUTCFullYear();
               {university}
             </h3>
             <h4>{carreer}</h4>
-          </div>
-          <div>
-            <time 
-              datetime={startYear}
-              data-title={startYear}>
-              {start}
-            </time>
-            {" - "}
-            <time 
-              datetime={endYear}
-              data-title={endYear}>
-              {end}
-            </time>
           </div>
         </header>
       </article>
