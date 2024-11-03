@@ -1,24 +1,19 @@
+/* src/styles/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Global styles */
 :root {
-  --background: #202023;
-  --background-light: #fdebf3;
+  --background: #1a1825;
+  --background-light: #faf3eb;
   --button: #78c2ad;
   --text: #fdebf3;
   --text-light: #1e1e2e;
   --text-link: #78c2ad;
-  --underline: #375a7f;
+  --underline: #31748f;
   --header: "Ubuntu";
   --body: "Josefin Sans", sans-serif;
-}
-
-html {
-  background-color: var(--background);
-  color: var(--text);
-}
-
-body {
-  max-width: 540px;
-  margin: 0 auto;
 }
 
 h1,
@@ -61,7 +56,7 @@ a {
 /* Navigation Bar */
 .navbar {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 0.8rem;
 }
 
@@ -103,7 +98,7 @@ a {
 
 /* Badge */
 .badge {
-  background-color: #584966;
+  background-color: #56949f;
   color: var(--text);
   border-radius: 6px;
   font-family: var(--body);
@@ -194,22 +189,15 @@ a {
   color: var(--text);
   font: 600 16px var(--body);
   padding: 8px 16px;
-  transition: background-color 0.4s, color 0.4s;
+  transition:
+    background-color 0.4s,
+    color 0.4s;
 }
 
 .btn:hover {
   background-color: var(--button);
   color: var(--text-light);
   cursor: pointer;
-}
-
-/* Skills */
-.skills {
-  margin-top: 8px;
-}
-
-.skills__img {
-  margin: 8px 4px;
 }
 
 /* Items */
@@ -365,12 +353,6 @@ html.light {
 
   .navbar__menu > a {
     margin: 0 11px;
-  }
-
-  .skills__img {
-    height: 30px;
-    width: 30px;
-    margin: 8px 1px;
   }
 
   .badge__list {

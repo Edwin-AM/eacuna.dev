@@ -17,13 +17,11 @@ const { title, description } = Astro.props as Props;
 <html lang="es">
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <Seo title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body>
+  <body class="max-w-[540px] mx-auto bg-basebg text-white">
     <main transition:animate={fade({ duration: "0.2s" })}>
-      <Header />
       <slot />
       <Footer />
     </main>
