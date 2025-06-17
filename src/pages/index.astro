@@ -1,27 +1,36 @@
 ---
-/**
- * Basado en el repositorio https://github.com/ttomczak3/Milky-Way
- */
-
 import Layout from "../layouts/Layout.astro";
 import Skills from "../components/Skills.astro";
 import Experience from "../components/sections/Experience.astro";
-import AboutMe from "../components/sections/AboutMe.astro"
+import AboutMe from "../components/sections/AboutMe.astro";
 import Education from "../components/sections/Education.astro";
+import { SITE, PROFILE } from "../config/site";
 ---
 
-<Layout title="Eacuna" description="Portafolio">
-  <section class="mt-5">
-    <h1 class="text-wrap">Edwin Acuña Montero</h1>
-    <span class="badge">Desarrollador Full-Stack</span>
-    <AboutMe />
-    <Experience />
-    <Education 
-      university={"Universidad de Costa Rica"}
-      carreer={"Bachillerato en Informática Empresarial"}
-      startYear={"2017"}
-      endYear={"2022"}
-    />
-    <Skills />
-  </section>
+<Layout {...SITE}>
+  <main role="main" class="mt-5 container mx-auto px-4">
+    <article class="space-y-8">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-wrap" id="main-content" tabindex="-1">
+          {PROFILE.name}
+        </h1>
+        <span class="badge inline-block mt-2 font-semibold bg-primary-100 text-primary-800 rounded-full dark:bg-primary-200 dark:text-primary-800">
+          {PROFILE.title}
+        </span>
+      </header>
+
+      <AboutMe />
+      
+      <Experience />
+      
+      <Education 
+        university={PROFILE.education.university}
+        carreer={PROFILE.education.carreer}
+        startYear={PROFILE.education.startYear}
+        endYear={PROFILE.education.endYear}
+      />
+      
+      <Skills />
+    </article>
+  </main>
 </Layout>

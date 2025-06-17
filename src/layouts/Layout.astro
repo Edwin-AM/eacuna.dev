@@ -1,9 +1,9 @@
 ---
 import { ViewTransitions, fade } from "astro:transitions";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Seo from "../components/Seo.astro";
-import "../styles/global.css";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Seo from "@/components/Seo.astro";
+import "@/styles/global.css";
 
 interface Props {
   title: string;
@@ -16,7 +16,6 @@ const { title, description } = Astro.props as Props;
 <!doctype html>
 <html lang="es">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital" rel="stylesheet">
     <Seo title={title} description={description} />
     <ViewTransitions />
   </head>
@@ -28,9 +27,136 @@ const { title, description } = Astro.props as Props;
   </body>
 </html>
 <style is:global>
+  :root {
+    --background: #1a1825;
+    --background-light: #faf3eb;
+    --button: #78c2ad;
+    --text: #fdebf3;
+    --text-light: #1e1e2e;
+    --text-link: #78c2ad;
+    --underline: #31748f;
+    --header: "Josefin Sans", sans-serif;
+    --body: "Josefin Sans", sans-serif;
+  }
+  h1,
+  h2 {
+    font-family: var(--header);
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    text-decoration: underline var(--underline);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    hyphens: auto;
+    line-height: 1.5;
+    text-indent: 1rem;
+  }
+  
+  small,
+  li {
+    font-family: var(--body);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+  }
+
+  .navbar__title {
+    font-family: var(--header);
+    font-size: 1.6rem;
+  }
+
+  .navbar__menu {
+    font-family: var(--body);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__title > a,
+  .navbar__menu > a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .navbar__menu > a {
+    margin: 0 10px;
+  }
+
+  .navbar__title > a:hover,
+  .navbar__menu > a:hover,
+  .navbar__menu > a:focus {
+    text-decoration: underline var(--underline);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+
+  .badge {
+    background-color: #56949f;
+    color: #fdebf3;
+    border-radius: 6px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.3em 0.6em 0.2em;
+  }
+
+  @media only screen and (max-width: 390px) {
+    body {
+      width: 330px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      width: 350px;
+    }
+
+    .navbar {
+      display: initial;
+    }
+
+    .navbar__title {
+      text-align: center;
+    }
+
+    .navbar__menu {
+      justify-content: space-between;
+    }
+
+    .navbar__menu > a {
+      margin: 0 11px;
+    }
   }
 </style>

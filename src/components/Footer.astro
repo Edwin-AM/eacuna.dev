@@ -4,42 +4,52 @@ const year = new Date().getFullYear();
 
 <footer>
   <div class="center">
-    <ul class="footer">
-      <li class="icon__btn">
-        <a
-          class="icon__link"
-          href="https://github.com/Edwin-AM"
-          target="_blank"
-          aria-label="Repositorio de GitHub"
-        >
-          <span id="github" class="git-icon">GitHub</span>
-        </a>
-      </li>
-      <li class="icon__btn">
-        <a
-          class="icon__link"
-          href="mailto: eeam5514@outlook.com"
-          aria-label="Enviar un correo a eeam5514@outlook.com"
-        >
-          <span class="mail-icon">Email</span>
-        </a>
-      </li>
-      <li class="icon__btn">
-        <a
-          class="icon__link"
-          href="https://www.linkedin.com/in/edwin-acu%C3%B1a-montero/"
-          target="_blank"
-          aria-label="Dirección del perfil de LinkedIn"
-        >
-          <span class="linked-in">LinkedIn</span>
-        </a>
-      </li>
-    </ul>
-    <small
-      >&copy; {year} Eacuna by <a
-        class="footer__link"
+    <!-- <ul class="social-links"> -->
+    <!--   <li> -->
+    <!--     <a href="https://github.com/tuusuario" target="_blank" class="social-link github"> -->
+    <!--       <i class="fab fa-github"></i> -->
+    <!--     </a> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <a href="mailto:tuemail@example.com" class="social-link email"> -->
+    <!--       <i class="fas fa-envelope"></i> -->
+    <!--     </a> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-link linkedin"> -->
+    <!--       <i class="fab fa-linkedin"></i> -->
+    <!--     </a> -->
+    <!--   </li> -->
+    <!-- </ul> -->
+    <small>
+      &copy; {year} Eacuna por <a
+        class="footer_link"
+        target="_blank"
         href="https://github.com/Edwin-AM">Edwin Acuña M</a
       >. Todos los derechos reservados.</small
     >
   </div>
 </footer>
+<style>
+  footer {
+    margin: 4rem 0;
+  }
+
+  .footer_link {
+    color: #78c2ad;
+    text-decoration: none;
+  }
+
+  .footer_link:hover {
+    text-decoration: underline;
+  }
+
+  /* Asegura que el texto en el footer se vea bien */
+  small {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #777;
+  }
+</style>
