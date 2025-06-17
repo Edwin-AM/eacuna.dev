@@ -1,12 +1,12 @@
 ---
-import Section from "../Section.astro"
-import { type Year } from "../../types/"
+import Section from "../Section.astro";
+import { type Year } from "../../types/";
 
 interface Props {
-  university: string;
-  carreer: string;
-  startYear: Year;
-  endYear: Year;
+	university: string;
+	carreer: string;
+	startYear: Year;
+	endYear: Year;
 }
 
 const { university, carreer } = Astro.props as Props;
