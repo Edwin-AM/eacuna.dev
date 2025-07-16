@@ -1,0 +1,47 @@
+{
+	"data": {
+		"name": "Edwin Acuña Montero",
+		"label": "Full Stack Developer con más de 2 años de experiencia, especializado en Vue.js, IBM i, QA y rendimiento web",
+		"profiles": {
+			"email": "eeam5514@outlook.com",
+			"linkedin": "https://www.linkedin.com/in/edwin-acuna-montero/",
+			"github": "https://github.com/Edwin-AM"
+		},
+		"location": {
+			"city": "Turrialba",
+			"province": "Cartago",
+			"country": "Costa Rica",
+			"countryCode": "CR"
+		},
+		"summary": "+2 años de experiencia desarrollador fullstack con experiencia en Vue.js y entornos IBM i. Me enfoco en crear soluciones eficientes, mejorar el rendimiento web y garantizar la calidad del software. Además, tengo habilidades en liderazgo técnico y trabajo en equipo."
+	},
+	"education": {
+		"institution": "Universidad de Costa Rica",
+		"area": "Informática Empresarial",
+		"studyLevel": "Bachillerato",
+		"startDate": "2018-01-01",
+		"endDate": "2023-01-01"
+	},
+	"work": {
+		"name": "CLAI Payments Technologies",
+		"position": "Desarrollador Web Jr",
+		"url": "https://clai.com/",
+		"startDate": "2023-03-23",
+		"endDate": null,
+		"summary": "Desarrollo de aplicaciones web con Vue.js y IBM i"
+	},
+	"skills": [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"TypeScript",
+		"Vue",
+		"React",
+		"Node",
+		"Tailwind",
+		"MySQL",
+		"Git",
+		"GitHub",
+		"IBM"
+	]
+}

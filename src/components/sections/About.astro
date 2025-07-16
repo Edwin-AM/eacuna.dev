@@ -1,0 +1,10 @@
+---
+import Section from "@/components/Section.astro";
+import { data } from "@info";
+
+const { summary } = data;
+---
+
+<Section title="Sobre mí">
+  <p>{summary}</p>
+</Section>
